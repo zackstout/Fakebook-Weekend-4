@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FAKEBOOK</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body ng-app="picsApp">
+  <div ng-controller="CommandCenter as cc">
+    <h1> what up </h1>
+    {{3+5}}
+
+    <div class="all" ng-model="cc.bool1">
+      <div class="pic" ng-click="cc.toggler1()" ng-hide="cc.bool1">
+        <img src="styles/images/dogyawn.jpg"><br>
+      </div>
+      <div class="caption" ng-click="cc.toggler1()" ng-show="cc.bool1">
+        HELLO THERE!
+      </div>
+      <div class="reaction">
+        <button ng-click="cc.liker1()">Like!</button>
+        {{cc.like1}}
+        <input type="text" ng-model="cc.comment1">
+        <button ng-click="cc.commenter1()">Comment!</button>
+      </div>
+    </div>
+
+    <div class="all">
+      <div class="pic" ng-click="cc.toggler2()">
+        <img src="styles/images/houseonwater.jpg"><br>
+      </div>
+      <div class="caption">
+      </div>
+      <div class="reaction">
+        <button ng-click="cc.liker2()">Like!</button>
+        {{cc.like2}}
+        <input type="text" ng-model="cc.comment2">
+        <button ng-click="cc.commenter2()">Comment!</button>
+      </div>
+    </div>
+
+    <div class="all">
+      <div class="pic" ng-click="cc.toggler3()">
+        <img src="styles/images/fieldperson.jpg"><br>
+      </div>
+      <div class="caption">
+      </div>
+      <div class="reaction">
+        <button ng-click="cc.liker3()">Like!</button>
+        {{cc.like3}}
+        <input type="text" ng-model="cc.comment3">
+        <button ng-click="cc.commenter3()">Comment!</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
