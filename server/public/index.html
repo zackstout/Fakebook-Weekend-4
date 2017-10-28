@@ -22,11 +22,18 @@
     </div> -->
 
     <div ng-repeat="image in cc.images">
-      <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300>
-      <div ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
+      <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300> <br>
+      <div class="desc" ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
         {{image.description}}
       </div>
-      <button ng-click="cc.clickLike(image)">Like!</button>"   "{{image.likes}}"   "{{image.views}}
+      <button ng-click="cc.clickLike(image)">Like!</button></t>Likes: {{image.likes}} &ensp;</t>Views: {{image.views}} <br>
+      <form ng-submit="cc.clickComment(image)">
+        <input type="text" ng-model="cc.comment">
+        <button type="submit">Comment</button>
+        <ul>
+          <li ng-repeat="comment in image.comments">{{image.comments}}</li>
+        </ul>
+      </form>
     </div>
 
     <!-- <div class="all">

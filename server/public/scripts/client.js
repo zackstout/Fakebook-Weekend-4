@@ -24,7 +24,8 @@ picsApp.controller('CommandCenter', function() {
     description: "HELLO THERE",
     showPic: true,
     likes: 0,
-    views: 0
+    views: 0,
+    comments: []
   };
 
   var image2 = {
@@ -32,7 +33,8 @@ picsApp.controller('CommandCenter', function() {
     description: "HI",
     showPic: true,
     likes: 0,
-    views: 0
+    views: 0,
+    comments: []
   };
 
   var image3 = {
@@ -40,7 +42,8 @@ picsApp.controller('CommandCenter', function() {
     description: 'what up!!!',
     showPic: true,
     likes: 0,
-    views: 0
+    views: 0,
+    comments: []
   };
 
   cc.images = [image1, image2, image3];
@@ -56,6 +59,12 @@ picsApp.controller('CommandCenter', function() {
   cc.clickLike = function(pic) {
     console.log('in likes', pic.likes);
     pic.likes ++;
+  };
+
+  cc.clickComment = function(pic) {
+    console.log('in comment', pic.comments);
+    pic.comments.push(cc.comment);
+    console.log(pic.comments);
   };
   //
   // cc.like1=0;
