@@ -12,7 +12,8 @@ picsApp.controller('CommandCenter', function() {
     showPic: true,
     likes: 0,
     views: 0,
-    comments: []
+    comments: [],
+    showComments: false
   };
 
   var image2 = {
@@ -21,7 +22,8 @@ picsApp.controller('CommandCenter', function() {
     showPic: true,
     likes: 0,
     views: 0,
-    comments: []
+    comments: [],
+    showComments: false
   };
 
   var image3 = {
@@ -30,7 +32,8 @@ picsApp.controller('CommandCenter', function() {
     showPic: true,
     likes: 0,
     views: 0,
-    comments: []
+    comments: [],
+    showComments: false
   };
 
   cc.images = [image1, image2, image3];
@@ -54,12 +57,9 @@ picsApp.controller('CommandCenter', function() {
     console.log(pic.comments);
   };
 
-  // cc.commenters1 = [];
-  //
-  // cc.commenter1 = function() {
-  //   console.log(cc.comment1);
-  //   cc.commenters1.push(cc.comment1);
-  //   console.log(cc.commenters1);
-  // };
+  cc.showComments = function(pic) {
+    pic.showComments = !pic.showComments;
+  };
+
 
 });
