@@ -5,6 +5,7 @@
   <title>FAKEBOOK</title>
   <script src="vendors/angular.min.js" charset="utf-8"></script>
   <script src="scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="vendors/css/bootstrap.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-app="picsApp">
@@ -20,7 +21,15 @@
       <btn></btn>
     </div> -->
 
-    <div class="all">
+    <div ng-repeat="image in cc.images">
+      <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300>
+      <div ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
+        {{image.description}}
+      </div>
+      <button ng-click="cc.clickLike(image)">Like!</button>"   "{{image.likes}}"   "{{image.views}}
+    </div>
+
+    <!-- <div class="all">
       <div class="pic" ng-click="cc.toggler1()" ng-hide="cc.bool1">
         <img src="styles/images/dogyawn.jpg"><br>
       </div>
@@ -69,7 +78,7 @@
         <input type="text" ng-model="cc.comment3">
         <button ng-click="cc.commenter3()">Comment!</button>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </body>
