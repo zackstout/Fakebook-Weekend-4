@@ -13,14 +13,8 @@ picsApp.controller('CommandCenter', function() {
   cc.like6=0;
 
   cc.bool1=false;
-
-  // var likes = [cc.like1, cc.like2, cc.like3, cc.like4, cc.like5, cc.like6];
-
-  // cc.liker = function(num) {
-  //   var count = "like" + num;
-  //   console.log(num, count, cc.count);
-  //   cc.count++;
-  // };
+  cc.bool2=false;
+  cc.bool3=false;
 
   cc.liker1 = function() {
     console.log(cc.like1);
@@ -36,6 +30,20 @@ picsApp.controller('CommandCenter', function() {
   cc.toggler1 = function() {
     console.log(cc.bool1);
     cc.bool1 = !cc.bool1;
+  };
+  cc.toggler2 = function() {
+    cc.bool2 = !cc.bool2;
+  };
+  cc.toggler3 = function() {
+    cc.bool3 = !cc.bool3;
+  };
+
+  cc.commenters1 = [];
+
+  cc.commenter1 = function() {
+    console.log(cc.comment1);
+    cc.commenters1.push(cc.comment1);
+    console.log(cc.commenters1);
   };
 
 });
