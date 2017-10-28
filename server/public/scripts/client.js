@@ -52,7 +52,6 @@ picsApp.controller('CommandCenter', function() {
   };
 
   cc.clickComment = function(pic) {
-    console.log('in comment', pic.comments);
     pic.comments.push(cc.comment);
     console.log(pic.comments);
   };

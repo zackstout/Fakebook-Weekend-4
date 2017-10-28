@@ -14,19 +14,25 @@
     {{3+5}}
 
     <div ng-repeat="image in cc.images">
+      
       <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300> <br>
+
       <div class="desc" ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
-        {{image.description}}
+        {{image.description}} <br>
       </div>
+
       <button ng-click="cc.clickLike(image)">Like!</button></t>Likes: {{image.likes}} &ensp;</t>Views: {{image.views}} <br>
+
       <form ng-submit="cc.clickComment(image)">
         <input type="text" ng-model="cc.comment">
         <button type="submit">Comment</button>
-        <button ng-click="cc.showComments(image)">Show Comments</button>
+        <button ng-click="cc.showComments(image)" ng-hide="image.showComments">Show Comments</button>
+        <button ng-click="cc.showComments(image)" ng-show="image.showComments">Hide Comments</button>
         <ul ng-show="image.showComments">
           <li ng-repeat="comment in image.comments">{{comment}}</li>
         </ul>
       </form>
+
     </div>
 
   </div>
