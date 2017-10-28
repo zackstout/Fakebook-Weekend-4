@@ -5,12 +5,24 @@ var picsApp = angular.module('picsApp', []);
 
 picsApp.controller('CommandCenter', function() {
   var cc = this;
+
+
+  // var image1 = {
+  //   path, description, boolean
+  // };
+  //
+  // cc.images = [image1, ..];
+  //
+  // cc.imageClick
+  //
+  // cc.likeClick
+  //
+  // 
+
+
   cc.like1=0;
   cc.like2=0;
   cc.like3=0;
-  cc.like4=0;
-  cc.like5=0;
-  cc.like6=0;
 
   cc.bool1=false;
   cc.bool2=false;

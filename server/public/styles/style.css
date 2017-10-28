@@ -1,10 +1,11 @@
 img {
   margin: 10px;
-  width: 400px;
-  height: auto;
+  width: auto;
+  height: 250px;
 
 }
 
 .caption{
+  margin: 10px;
   height: 250px;
 }
