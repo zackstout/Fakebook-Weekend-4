@@ -15,17 +15,40 @@ var pool = new pg.Pool(config);
 
 var styleHigh = {
   width: '380px',
-  height: 'auto'
+  height: 'auto',
+  'margin':'15px',
+  'padding':'15px'
 };
 
 var styleWide = {
-  height: '380px',
-  width: 'auto'
+  height: '400px',
+  width: 'auto',
+  'margin':'15px',
+  'padding':'15px'
+};
+
+var styleHigh2 = {
+  width: 'auto',
+  height: '600px',
+  'border-radius': '10px',
+  'background-color': 'gray',
+  'margin': '20px',
+  'padding': '20px'
+};
+
+var styleWide2 = {
+  height: 'auto',
+  width: '500px',
+  'border-radius': '10px',
+  'background-color': 'gray',
+  'margin': '20px',
+  'padding': '20px'
 };
 
 var style2 = {
-  width: '380px',
-  height: '380px'
+  width: '400px',
+  height: '400px',
+
 };
 
 
@@ -39,7 +62,8 @@ var image0 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 var image1 = {
@@ -52,7 +76,8 @@ var image1 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 var image2 = {
@@ -65,7 +90,8 @@ var image2 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: style2
+  style2: style2,
+  styleHolder: styleHigh2
 };
 
 var image3 = {
@@ -78,7 +104,8 @@ var image3 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 var image4 = {
@@ -91,7 +118,8 @@ var image4 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: style2
+  style2: style2,
+  styleHolder: styleHigh2
 };
 
 var image5 = {
@@ -104,7 +132,8 @@ var image5 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: style2
+  style2: style2,
+  styleHolder: styleHigh2
 };
 
 var image6 = {
@@ -117,7 +146,8 @@ var image6 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 var image7 = {
@@ -130,7 +160,8 @@ var image7 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 var image8 = {
@@ -143,7 +174,8 @@ var image8 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: style2
+  style2: style2,
+  styleHolder: styleHigh2
 };
 
 var image9 = {
@@ -156,7 +188,8 @@ var image9 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: style2
+  style2: style2,
+  styleHolder: styleWide2
 };
 
 // var images = {
