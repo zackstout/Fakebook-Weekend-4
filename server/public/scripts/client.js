@@ -11,21 +11,12 @@ picsApp.controller('CommandCenter', function($http) {
     console.log('in here', pic.showPic);
     pic.showPic = !pic.showPic;
     console.log('in here again', pic.showPic);
-    if (!pic.showPic) {
-      $http.put('/images/views/' + pic.id, pic).then(function (response) {
-        console.log('w00t');
-        getPics();
-      }).catch(function (err) {
-        console.log('whoops', err);
-      });
-    } else {
-      $http.put('/images/views/' + pic.id, pic).then(function (response) {
-        console.log('w00t');
-        getPics();
-      }).catch(function (err) {
-        console.log('whoops', err);
-      });
-    }
+    $http.put('/images/views/' + pic.id, pic).then(function (response) {
+      console.log('w00t');
+      getPics();
+    }).catch(function (err) {
+      console.log('whoops', err);
+    });
   };
 
   cc.clickLike = function(pic) {
@@ -40,6 +31,7 @@ picsApp.controller('CommandCenter', function($http) {
     });
   };
 
+//going to need a ...POSt route??
   cc.clickComment = function(pic) {
     if (pic.comment !== '') {
       pic.comments.push(pic.comment);
@@ -48,7 +40,6 @@ picsApp.controller('CommandCenter', function($http) {
     console.log(pic.comments);
   };
 
-//really unclear why clicking on this button adds stuff to the comments array
   cc.showComments = function(pic) {
     pic.showComments = !pic.showComments;
   };
@@ -64,6 +55,5 @@ picsApp.controller('CommandCenter', function($http) {
       console.log('whooooops');
     });
   }
-
 
 });

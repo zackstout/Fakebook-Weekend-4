@@ -26,38 +26,44 @@
           <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-2">
-              <button ng-click="cc.clickLike(image)">LIKE</button>
+              <button ng-click="cc.clickLike(image)">
+              <span class="glyphicon glyphicon-thumbs-up"></span></button>
             </div>
             <div class="col-md-6">
               <span class="glyphicon glyphicon-heart"></span>
-              {{image.likesSentence}}
-            </div>
-            <div class="col-md-2">
-              <span class="glyphicon glyphicon-eye-open"></span> {{image.views}}
-            </div>
-            <div class="col-md-1"></div>
-          </div> <!--End Row-->
+              <ng-pluralize count="image.likes"
+              when="{'0': 'Nobody likes this </3',
+              '1': '1 person likes this',
+              'other': '{} people like this!'}">
+            </ng-pluralize>
+            <!-- {{image.likesSentence}} -->
+          </div>
+          <div class="col-md-2">
+            <span class="glyphicon glyphicon-eye-open"></span> {{image.views}}
+          </div>
+          <div class="col-md-1"></div>
+        </div> <!--End Row-->
 
 
-          <form ng-submit="cc.clickComment(image)">
-            <input type="text" ng-model="image.comment">
-            <button type="submit">Comment</button>
-            <button ng-click="cc.showComments(image)" ng-hide="image.showComments">
-              <span class="glyphicon glyphicon-chevron-down"></span>
-            </button>
-            <button ng-click="cc.showComments(image)" ng-show="image.showComments">
-              <span class="glyphicon glyphicon-chevron-up"></span>
-            </button>
-            <div ng-show="image.showComments">
-              <ul >
-                <li ng-repeat="comment in image.comments track by $index">{{comment}}</li>
-              </ul>
-            </div>
-          </form>
+        <form ng-submit="cc.clickComment(image)">
+          <input type="text" ng-model="image.comment">
+          <button type="submit">Comment</button>
+          <button ng-click="cc.showComments(image)" ng-hide="image.showComments">
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+          <button ng-click="cc.showComments(image)" ng-show="image.showComments">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </button>
+          <div ng-show="image.showComments">
+            <ul >
+              <li ng-repeat="comment in image.comments track by $index">{{comment}}</li>
+            </ul>
+          </div>
+        </form>
 
-        </div> <!-- End holding tank-->
-      </div> <!--End ng-repeat -->
-    </div> <!-- End row -->
-  </div>
+      </div> <!-- End holding tank-->
+    </div> <!--End ng-repeat -->
+  </div> <!-- End row -->
+</div>
 </body>
 </html>

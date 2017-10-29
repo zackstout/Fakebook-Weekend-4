@@ -272,19 +272,19 @@ var image13 = {
 
 var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
 
-function updateLikesSentences() {
-  for (var i = 0; i < images.length; i++) {
-    if (images[i].likes == 0) {
-      images[i].likesSentence = 'No one likes this </3';
-    } else if (images[i].likes == 1) {
-      images[i].likesSentence = '1 person likes this';
-    } else {
-      images[i].likesSentence = images[i].likes + ' people like this!!!';
-    }
-  }
-}
+// function updateLikesSentences() {
+//   for (var i = 0; i < images.length; i++) {
+//     if (images[i].likes == 0) {
+//       images[i].likesSentence = 'No one likes this </3';
+//     } else if (images[i].likes == 1) {
+//       images[i].likesSentence = '1 person likes this';
+//     } else {
+//       images[i].likesSentence = images[i].likes + ' people like this!!!';
+//     }
+//   }
+// }
 
-updateLikesSentences();
+// updateLikesSentences();
 
 //
 router.put('/likes/:id', function(req, res){
@@ -317,7 +317,7 @@ router.put('/views/:id', function(req, res){
 });
 
 router.get('/', function(req, res){
-  updateLikesSentences();
+  // updateLikesSentences();
   res.send(images);
   // console.log(images);
 });
