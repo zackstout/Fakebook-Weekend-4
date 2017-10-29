@@ -54,8 +54,6 @@ var image2 = {
 
 var images = [image0, image1, image2];
 
-
-
 //
 router.put('/likes/:id', function(req, res){
     console.log(req.body.id);
@@ -86,7 +84,6 @@ router.put('/likes/:id', function(req, res){
       res.sendStatus(201);
     });
 
-// Records GET route
 router.get('/', function(req, res){
     res.send(images);
     // console.log(images);

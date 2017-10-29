@@ -28,9 +28,18 @@ picsApp.controller('CommandCenter', function($http) {
     }
   };
 
+  cc.people = '';
+
   cc.clickLike = function(pic) {
     console.log('in likes', pic.likes);
     pic.likes ++;
+    if (pic.likes == 0) {
+      cc.people = 'No one likes this </3';
+    } else if (pic.likes == 1) {
+      cc.people = '1 person likes this';
+    } else {
+      cc.people = pic.likes + 'people like this!!!';
+    }
     $http.put('/images/likes/' + pic.id, pic).then(function (response) {
       console.log('w00t');
       getPics();

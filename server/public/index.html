@@ -21,10 +21,9 @@
         {{image.description}} <br>
       </div>
 
-      <button ng-click="cc.clickLike(image)">Like!</button></t>Likes:
-      <!-- <ng-pluralize count= "cc.image.likes" when "{'0': 'No one likes this </3', 'one': '1 person likes this', 'other': '{} people like this!'}"> -->
-      {{image.likes}}
-    <!-- </ng-pluralize> -->
+      <button ng-click="cc.clickLike(image)">Like!</button>&ensp;Likes:
+      <!-- <ng-pluralize count= "image.likes" when "{'0': 'No one likes this </3', 'one': '1 person likes this', 'other': '{} people like this!'}"> -->
+      {{cc.people}}
     &ensp;</t>Views: {{image.views}} <br>
 
 
