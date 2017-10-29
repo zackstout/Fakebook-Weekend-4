@@ -11,43 +11,43 @@ var config = {
   idleTimeoutMillis: 30000
 };
 var pool = new pg.Pool(config);
-
-
-var styleHigh = {
-  width: '380px',
-  height: 'auto',
-  'margin':'15px',
-  'padding':'15px'
-};
+//
+//
+// var styleHigh = {
+//   width: '380px',
+//   height: 'auto',
+//   'margin':'15px',
+//   'padding':'15px'
+// };
 
 var styleWide = {
-  height: '400px',
+  height: '300px',
   width: 'auto',
-  'margin':'15px',
-  'padding':'15px'
+  'margin':'8px',
+  'padding':'8px'
 };
 
-var styleHigh2 = {
-  width: 'auto',
-  height: '600px',
-  'border-radius': '10px',
-  'background-color': 'gray',
-  'margin': '20px',
-  'padding': '20px'
-};
+// var styleHigh2 = {
+//   width: 'auto',
+//   height: '600px',
+//   'border-radius': '10px',
+//   'background-color': 'gray',
+//   'margin': '20px',
+//   'padding': '20px'
+// };
 
 var styleWide2 = {
-  height: 'auto',
-  width: '500px',
+  height: '450px',
+  width: 'auto',
   'border-radius': '10px',
   'background-color': 'gray',
-  'margin': '20px',
-  'padding': '20px'
+  'margin': '8px',
+  'padding': '8px'
 };
 
 var style2 = {
-  width: '400px',
-  height: '400px',
+  width: '350px',
+  height: '350px',
 
 };
 
@@ -89,9 +89,9 @@ var image2 = {
   views: 0,
   comments: [],
   showComments: false,
-  style: styleHigh,
+  style: styleWide,
   style2: style2,
-  styleHolder: styleHigh2
+  styleHolder: styleWide2
 };
 
 var image3 = {
@@ -117,9 +117,9 @@ var image4 = {
   views: 0,
   comments: [],
   showComments: false,
-  style: styleHigh,
+  style: styleWide,
   style2: style2,
-  styleHolder: styleHigh2
+  styleHolder: styleWide2
 };
 
 var image5 = {
@@ -131,9 +131,9 @@ var image5 = {
   views: 0,
   comments: [],
   showComments: false,
-  style: styleHigh,
+  style: styleWide,
   style2: style2,
-  styleHolder: styleHigh2
+  styleHolder: styleWide2
 };
 
 var image6 = {
@@ -173,9 +173,9 @@ var image8 = {
   views: 0,
   comments: [],
   showComments: false,
-  style: styleHigh,
+  style: styleWide,
   style2: style2,
-  styleHolder: styleHigh2
+  styleHolder: styleWide2
 };
 
 var image9 = {
@@ -192,13 +192,68 @@ var image9 = {
   styleHolder: styleWide2
 };
 
+var image10 = {
+  id: 10,
+  path: "styles/images/vanity.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2,
+  styleHolder: styleWide2
+};
+
+var image11 = {
+  id: 11,
+  path: "styles/images/gold.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2,
+  styleHolder: styleWide2
+};
+
+var image12 = {
+  id: 12,
+  path: "styles/images/mononoke.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2,
+  styleHolder: styleWide2
+};
+
+var image13 = {
+  id: 13,
+  path: "styles/images/goose.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2,
+  styleHolder: styleWide2
+};
 // var images = {
 //   image1: image1,
 //   image2: image2,
 //   image3: image3
 // };
 
-var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9];
+var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
 
 //
 router.put('/likes/:id', function(req, res){
