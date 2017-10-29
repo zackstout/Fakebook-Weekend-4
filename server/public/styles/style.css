@@ -18,5 +18,10 @@ body {
 
 .holdingTank {
   background-color: pink;
-  
+
+}
+
+.row {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }

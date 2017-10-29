@@ -37,12 +37,13 @@ var styleWide = {
 // };
 
 var styleWide2 = {
-  height: '450px',
+  height: '500px',
   width: 'auto',
   'border-radius': '10px',
   'background-color': 'rgba(231, 116, 113, 0.4)',
   'margin-bottom': '18px',
-  'padding': '12px'
+  'padding': '12px',
+  'align-content':'center'
 };
 
 var style2 = {
@@ -253,41 +254,58 @@ var image13 = {
 //   image3: image3
 // };
 
+
+
 var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
+
+function updateLikesSentences() {
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].likes == 0) {
+      images[i].likesSentence = 'No one likes this </3';
+    } else if (images[i].likes == 1) {
+      images[i].likesSentence = '1 person likes this';
+    } else {
+      images[i].likesSentence = images[i].likes + ' people likes this!!!';
+    }
+  }
+}
+
+updateLikesSentences();
 
 //
 router.put('/likes/:id', function(req, res){
-    console.log(req.body.id);
-    // images.splice(req.body.id, 1);
-    for (var i = 0; i < images.length; i++) {
-      if (images[i].id == req.body.id) {
-        images[i].likes ++;
-        console.log(images[i]);
-        // images.splice(req.body.id, 0, images[i]);
-      }
+  console.log(req.body.id);
+  // images.splice(req.body.id, 1);
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].id == req.body.id) {
+      images[i].likes ++;
+      console.log(images[i]);
+      // images.splice(req.body.id, 0, images[i]);
     }
-    res.sendStatus(201);
-  });
+  }
+  res.sendStatus(201);
+});
 
-  router.put('/views/:id', function(req, res){
-      console.log(req.body.id);
-      // images.splice(req.body.id, 1);
-      for (var i = 0; i < images.length; i++) {
-        if (images[i].id == req.body.id) {
-          images[i].showPic = !images[i].showPic;
-          if (!images[i].showPic) {
-          images[i].views ++;
-        }
-          console.log(images[i]);
-          // images.splice(req.body.id, 0, images[i]);
-        }
+router.put('/views/:id', function(req, res){
+  console.log(req.body.id);
+  // images.splice(req.body.id, 1);
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].id == req.body.id) {
+      images[i].showPic = !images[i].showPic;
+      if (!images[i].showPic) {
+        images[i].views ++;
       }
-      res.sendStatus(201);
-    });
+      console.log(images[i]);
+      // images.splice(req.body.id, 0, images[i]);
+    }
+  }
+  res.sendStatus(201);
+});
 
 router.get('/', function(req, res){
-    res.send(images);
-    // console.log(images);
+  updateLikesSentences();
+  res.send(images);
+  // console.log(images);
 });
 
 
