@@ -57,7 +57,7 @@ var images = [image0, image1, image2];
 
 
 //
-router.put('/:id', function(req, res){
+router.put('/likes/:id', function(req, res){
     console.log(req.body.id);
     // images.splice(req.body.id, 1);
     for (var i = 0; i < images.length; i++) {
@@ -69,6 +69,22 @@ router.put('/:id', function(req, res){
     }
     res.sendStatus(201);
   });
+
+  router.put('/views/:id', function(req, res){
+      console.log(req.body.id);
+      // images.splice(req.body.id, 1);
+      for (var i = 0; i < images.length; i++) {
+        if (images[i].id == req.body.id) {
+          images[i].showPic = !images[i].showPic;
+          if (!images[i].showPic) {
+          images[i].views ++;
+        }
+          console.log(images[i]);
+          // images.splice(req.body.id, 0, images[i]);
+        }
+      }
+      res.sendStatus(201);
+    });
 
 // Records GET route
 router.get('/', function(req, res){
