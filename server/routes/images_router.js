@@ -14,10 +14,10 @@ var pool = new pg.Pool(config);
 //
 //
 var styleHigh = {
-  width: '380px',
-  height: 'auto',
-  'margin':'15px',
-  'padding':'15px'
+  height: '450px',
+  width: 'auto',
+  'margin':'8px',
+  'padding':'8px'
 };
 
 var styleWide = {
@@ -27,28 +27,29 @@ var styleWide = {
   'padding':'8px'
 };
 
-var styleHigh2 = {
+var styleHighBox = {
   width: 'auto',
   height: '600px',
-  'border-radius': '10px',
+  'border-radius': '12px',
   'background-color': 'rgba(231, 116, 113, 0.4)',
-  'margin': '20px',
-  'padding': '20px'
+  'margin': '10px',
+  'padding': '10px'
 };
 
-var styleWide2 = {
+var styleWideBox = {
   height: '500px',
   width: 'auto',
-  'border-radius': '10px',
+  'border-radius': '12px',
   'background-color': 'rgba(231, 116, 113, 0.4)',
-  'margin-bottom': '18px',
-  'padding': '12px',
+  'margin-bottom': '10px',
+  'padding': '10px',
   'align-content':'center'
 };
 
 var style2 = {
   width: '350px',
   height: '350px',
+  'background-color': 'rgba(231, 116, 113, 0.4)'
 
 };
 
@@ -65,7 +66,7 @@ var image0 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image1 = {
@@ -80,7 +81,7 @@ var image1 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image2 = {
@@ -95,7 +96,7 @@ var image2 = {
   showComments: false,
   style: styleHigh,
   style2: style2,
-  styleHolder: styleHigh2
+  styleHolder: styleHighBox
 };
 
 var image3 = {
@@ -110,7 +111,7 @@ var image3 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image4 = {
@@ -123,9 +124,9 @@ var image4 = {
   comment: '',
   comments: [],
   showComments: false,
-  style: styleWide,
+  style: styleHigh,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleHighBox
 };
 
 var image5 = {
@@ -140,7 +141,7 @@ var image5 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image6 = {
@@ -155,7 +156,7 @@ var image6 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image7 = {
@@ -170,7 +171,7 @@ var image7 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image8 = {
@@ -183,9 +184,9 @@ var image8 = {
   comment: '',
   comments: [],
   showComments: false,
-  style: styleWide,
+  style: styleHigh,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleHighBox
 };
 
 var image9 = {
@@ -200,7 +201,7 @@ var image9 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image10 = {
@@ -215,7 +216,7 @@ var image10 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image11 = {
@@ -230,7 +231,7 @@ var image11 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image12 = {
@@ -245,7 +246,7 @@ var image12 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
 
 var image13 = {
@@ -260,41 +261,29 @@ var image13 = {
   showComments: false,
   style: styleWide,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleWideBox
 };
-// var images = {
-//   image1: image1,
-//   image2: image2,
-//   image3: image3
-// };
-
-
 
 var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
-
-// function updateLikesSentences() {
-//   for (var i = 0; i < images.length; i++) {
-//     if (images[i].likes == 0) {
-//       images[i].likesSentence = 'No one likes this </3';
-//     } else if (images[i].likes == 1) {
-//       images[i].likesSentence = '1 person likes this';
-//     } else {
-//       images[i].likesSentence = images[i].likes + ' people like this!!!';
-//     }
-//   }
-// }
-
-// updateLikesSentences();
 
 //
 router.put('/likes/:id', function(req, res){
   console.log(req.body.id);
-  // images.splice(req.body.id, 1);
   for (var i = 0; i < images.length; i++) {
     if (images[i].id == req.body.id) {
       images[i].likes ++;
       console.log(images[i]);
-      // images.splice(req.body.id, 0, images[i]);
+    }
+  }
+  res.sendStatus(201);
+});
+
+router.put('/comments/:id', function(req, res){
+  // console.log(req.body.comment);
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].id == req.body.id) {
+      images[i].comments.push(req.body.comment);
+      console.log(images[i]);
     }
   }
   res.sendStatus(201);
@@ -302,7 +291,6 @@ router.put('/likes/:id', function(req, res){
 
 router.put('/views/:id', function(req, res){
   console.log(req.body.id);
-  // images.splice(req.body.id, 1);
   for (var i = 0; i < images.length; i++) {
     if (images[i].id == req.body.id) {
       images[i].showPic = !images[i].showPic;
@@ -310,16 +298,13 @@ router.put('/views/:id', function(req, res){
         images[i].views ++;
       }
       console.log(images[i]);
-      // images.splice(req.body.id, 0, images[i]);
     }
   }
   res.sendStatus(201);
 });
 
 router.get('/', function(req, res){
-  // updateLikesSentences();
   res.send(images);
-  // console.log(images);
 });
 
 

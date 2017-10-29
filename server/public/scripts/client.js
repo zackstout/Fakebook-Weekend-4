@@ -34,9 +34,18 @@ picsApp.controller('CommandCenter', function($http) {
 //going to need a ...POSt route??
   cc.clickComment = function(pic) {
     if (pic.comment !== '') {
-      pic.comments.push(pic.comment);
-      pic.comment = '';
+      $http.put('/images/comments/' + pic.id, pic).then(function (response) {
+        console.log('w00t');
+        getPics();
+      }).catch(function (err) {
+        console.log('whoops', err);
+      });
+
+
+      // pic.comments.push(pic.comment);
+      // pic.comment = '';
     }
+
     console.log(pic.comments);
   };
 
