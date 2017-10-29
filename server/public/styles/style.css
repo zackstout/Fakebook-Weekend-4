@@ -5,6 +5,10 @@ img {
 
 }
 
+ul {
+  list-style-type: square;
+}
+
 .caption {
   margin: 20px;
   background-color: powderBlue;

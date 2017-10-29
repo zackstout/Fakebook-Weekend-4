@@ -9,12 +9,11 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-app="picsApp">
-  <div ng-controller="CommandCenter as cc" class="container">
-    <h1> Fakebook </h1>
-    {{3+5}}
+  <div ng-controller="CommandCenter as cc" class="container-fluid">
+    <h1> Welcome to Fakebook </h1>
 
     <div class="row">
-      <div ng-repeat="image in cc.images track by $index" class="col-md-5 col-sm-6 col-xs-12 col-lg-4">
+      <div ng-repeat="image in cc.images track by $index" class="col-md-4 col-sm-6 col-xs-12 col-lg-4">
         <div class="holdingTank" ng-style={{image.styleHolder}}>
 
           <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} ng-style={{image.style}}> <br>
@@ -25,11 +24,11 @@
 
           <div class="row">
             <div class="col-md-1"></div>
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-3">
               <button ng-click="cc.clickLike(image)">
               <span class="glyphicon glyphicon-thumbs-up"></span></button>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-5">
               <span class="glyphicon glyphicon-heart"></span>
               <ng-pluralize count="image.likes"
               when="{'0': 'Nobody likes this </3',
@@ -38,7 +37,7 @@
             </ng-pluralize>
             <!-- {{image.likesSentence}} -->
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-sm-3">
             <span class="glyphicon glyphicon-eye-open"></span> {{image.views}}
           </div>
           <div class="col-md-1"></div>
