@@ -9,21 +9,22 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body ng-app="picsApp">
-  <div ng-controller="CommandCenter as cc">
+  <div ng-controller="CommandCenter as cc" class="container-fluid">
     <h1> Fakebook </h1>
     {{3+5}}
 
-    <div ng-repeat="image in cc.images track by $index">
+<div class="row">
+    <div ng-repeat="image in cc.images track by $index" class="col-md">
 
-      <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300> <br>
+      <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} ng-style={{image.style}}> <br>
 
-      <div class="desc" ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
+      <div ng-style={{image.style2}} ng-hide="image.showPic" ng-click="cc.clickImage(image)" class="caption">
         {{image.description}} <br>
       </div>
 
       <button ng-click="cc.clickLike(image)">Like!</button>&ensp;Likes:
       <!-- <ng-pluralize count= "image.likes" when "{'0': 'No one likes this </3', 'one': '1 person likes this', 'other': '{} people like this!'}"> -->
-      {{cc.people}}
+      {{image.likes}}
     &ensp;</t>Views: {{image.views}} <br>
 
 
@@ -32,13 +33,15 @@
         <button type="submit">Comment</button>
         <button ng-click="cc.showComments(image)" ng-hide="image.showComments">Show Comments</button>
         <button ng-click="cc.showComments(image)" ng-show="image.showComments">Hide Comments</button>
-        <ul ng-show="image.showComments">
-          <li ng-repeat="comment in image.comments">{{comment}}</li>
+        <div ng-show="image.showComments">
+        <ul >
+          <li ng-repeat="comment in image.comments ">{{comment}}</li>
         </ul>
+      </div>
       </form>
 
     </div>
-
+</div>
   </div>
 </body>
 </html>

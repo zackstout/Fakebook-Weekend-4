@@ -28,18 +28,17 @@ picsApp.controller('CommandCenter', function($http) {
     }
   };
 
-  cc.people = '';
+  cc.people = 'No one likes this </3';
 
   cc.clickLike = function(pic) {
     console.log('in likes', pic.likes);
     pic.likes ++;
-    if (pic.likes == 0) {
-      cc.people = 'No one likes this </3';
-    } else if (pic.likes == 1) {
-      cc.people = '1 person likes this';
-    } else {
-      cc.people = pic.likes + 'people like this!!!';
-    }
+    
+    // if (pic.likes == 1) {
+    //   cc.people = '1 person likes this';
+    // } else {
+    //   cc.people = pic.likes + ' people like this!!!';
+    // }
     $http.put('/images/likes/' + pic.id, pic).then(function (response) {
       console.log('w00t');
       getPics();
@@ -49,10 +48,11 @@ picsApp.controller('CommandCenter', function($http) {
   };
 
   cc.clickComment = function(pic) {
-    pic.comments.push(cc.comment);
+    pic.comments.push(angular.copy(cc.comment));
     console.log(pic.comments);
   };
 
+//really unclear why clicking on this button adds stuff to the comments array
   cc.showComments = function(pic) {
     pic.showComments = !pic.showComments;
   };
@@ -70,16 +70,4 @@ picsApp.controller('CommandCenter', function($http) {
   }
 
 
-
-
 });
-
-var x =1, y=2;
-
-var arr = [x, y];
-
-
-function changearr() {
-  x = 3;
-  return arr;
-}

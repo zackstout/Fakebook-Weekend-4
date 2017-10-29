@@ -13,37 +13,150 @@ var config = {
 var pool = new pg.Pool(config);
 
 
+var styleHigh = {
+  width: '380px',
+  height: 'auto'
+};
+
+var styleWide = {
+  height: '380px',
+  width: 'auto'
+};
+
+var style2 = {
+  width: '380px',
+  height: '380px'
+};
+
+
 var image0 = {
   id: 0,
-  path: "styles/images/dogyawn.jpg",
+  path: "styles/images/doogle.jpg",
   description: "HELLO THERE",
   showPic: true,
   likes: 0,
   views: 0,
   comments: [],
-  showComments: false
+  showComments: false,
+  style: styleWide,
+  style2: style2
 };
 
 var image1 = {
   id: 1,
-  path: "styles/images/houseonwater.jpg",
+  path: "styles/images/bball.jpg",
   description: "HI",
   showPic: true,
   likes: 0,
   views: 0,
   comments: [],
-  showComments: false
+  showComments: false,
+  style: styleWide,
+  style2: style2
 };
 
 var image2 = {
   id: 2,
-  path: "styles/images/fieldperson.jpg",
+  path: "styles/images/calf.jpg",
   description: 'what up!!!',
   showPic: true,
   likes: 0,
   views: 0,
   comments: [],
-  showComments: false
+  showComments: false,
+  style: styleHigh,
+  style2: style2
+};
+
+var image3 = {
+  id: 3,
+  path: "styles/images/homies.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2
+};
+
+var image4 = {
+  id: 4,
+  path: "styles/images/shorts.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleHigh,
+  style2: style2
+};
+
+var image5 = {
+  id: 5,
+  path: "styles/images/reflection.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleHigh,
+  style2: style2
+};
+
+var image6 = {
+  id: 6,
+  path: "styles/images/theweeds.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2
+};
+
+var image7 = {
+  id: 7,
+  path: "styles/images/winter.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2
+};
+
+var image8 = {
+  id: 8,
+  path: "styles/images/silo.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleHigh,
+  style2: style2
+};
+
+var image9 = {
+  id: 9,
+  path: "styles/images/sbsb.jpg",
+  description: "HI",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  style2: style2
 };
 
 // var images = {
@@ -52,7 +165,7 @@ var image2 = {
 //   image3: image3
 // };
 
-var images = [image0, image1, image2];
+var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9];
 
 //
 router.put('/likes/:id', function(req, res){
