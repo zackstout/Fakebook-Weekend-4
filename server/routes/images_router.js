@@ -19,6 +19,7 @@ router.put('/likes/:id', function(req, res){
   for (var i = 0; i < images.length; i++) {
     if (images[i].id == req.body.id) {
       images[i].likes ++;
+      images[i].anyLikes = true;
       console.log(images[i]);
     }
   }
@@ -35,6 +36,17 @@ router.put('/comments/:id', function(req, res){
   }
   res.sendStatus(201);
 }); //end PUT route for comments
+
+router.put('/showComments/:id', function(req, res){
+  // console.log(req.body.comment);
+  for (var i = 0; i < images.length; i++) {
+    if (images[i].id == req.body.id) {
+      images[i].showComments = !images[i].showComments;
+      console.log(images[i]);
+    }
+  }
+  res.sendStatus(201);
+}); //end PUT route for showComments
 
 router.put('/views/:id', function(req, res){
   console.log(req.body.id);

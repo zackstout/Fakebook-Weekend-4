@@ -40,17 +40,18 @@ picsApp.controller('CommandCenter', function($http) {
       }).catch(function (err) {
         console.log('whoops', err);
       });
-
-
-      // pic.comments.push(pic.comment);
-      // pic.comment = '';
     }
-
     console.log(pic.comments);
   };
 
   cc.showComments = function(pic) {
-    pic.showComments = !pic.showComments;
+    // pic.showComments = !pic.showComments;
+    $http.put('/images/showComments/' + pic.id, pic).then(function (response) {
+      console.log('w00t');
+      getPics();
+    }).catch(function (err) {
+      console.log('whoops', err);
+    });
   };
 
   cc.images = [];

@@ -18,7 +18,7 @@
 
           <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} ng-style={{image.style}}> <br>
 
-          <div ng-style={{image.style2}} ng-hide="image.showPic" ng-click="cc.clickImage(image)" class="caption">
+          <div ng-style={{image.styleCaption}} ng-hide="image.showPic" ng-click="cc.clickImage(image)" class="caption">
             {{image.description}} <br>
           </div>
 
@@ -29,9 +29,10 @@
               <span class="glyphicon glyphicon-thumbs-up"></span></button>
             </div>
             <div class="col-md-6 col-sm-5">
-              <span class="glyphicon glyphicon-heart"></span>
+              <span class="glyphicon glyphicon-heart" ng-show="image.anyLikes"></span>
+              <span class="glyphicon glyphicon-tint" ng-hide="image.anyLikes"></span>
               <ng-pluralize count="image.likes"
-              when="{'0': 'Nobody likes this </3',
+              when="{'0': 'Nobody likes this',
               '1': '1 person likes this',
               'other': '{} people like this!'}">
             </ng-pluralize>
@@ -48,10 +49,10 @@
           <input type="text" ng-model="image.comment">
           <button type="submit">Comment</button>
           <button ng-click="cc.showComments(image)" ng-hide="image.showComments">
-            <span class="glyphicon glyphicon-chevron-down"></span>
+            <span class="glyphicon glyphicon-menu-down"></span>
           </button>
           <button ng-click="cc.showComments(image)" ng-show="image.showComments">
-            <span class="glyphicon glyphicon-chevron-up"></span>
+            <span class="glyphicon glyphicon-menu-up"></span>
           </button>
           <div ng-show="image.showComments">
             <ul >

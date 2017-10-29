@@ -1,5 +1,5 @@
 
-
+//Styling options for images depending on aspect ratio:
 var styleWide = {
   height: '300px',
   width: 'auto',
@@ -48,6 +48,7 @@ var styleCaptionHigh = {
   'padding':'8px'
 };
 
+//Images:
 var image0 = {
   id: 0,
   path: "styles/images/doogle.jpg",
@@ -59,7 +60,7 @@ var image0 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -74,7 +75,7 @@ var image1 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -89,7 +90,7 @@ var image2 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: styleCaptionHigh,
+  styleCaption: styleCaptionHigh,
   styleHolder: styleHighBox
 };
 
@@ -104,7 +105,7 @@ var image3 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -119,7 +120,7 @@ var image4 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: styleCaptionHigh,
+  styleCaption: styleCaptionHigh,
   styleHolder: styleHighBox
 };
 
@@ -134,7 +135,7 @@ var image5 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -149,7 +150,7 @@ var image6 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -164,7 +165,7 @@ var image7 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -179,7 +180,7 @@ var image8 = {
   comments: [],
   showComments: false,
   style: styleHigh,
-  style2: styleCaptionHigh,
+  styleCaption: styleCaptionHigh,
   styleHolder: styleHighBox
 };
 
@@ -194,7 +195,7 @@ var image9 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -209,7 +210,7 @@ var image10 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -224,7 +225,7 @@ var image11 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -239,7 +240,7 @@ var image12 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
@@ -254,7 +255,7 @@ var image13 = {
   comments: [],
   showComments: false,
   style: styleWide,
-  style2: styleCaptionWide,
+  styleCaption: styleCaptionWide,
   styleHolder: styleWideBox
 };
 
