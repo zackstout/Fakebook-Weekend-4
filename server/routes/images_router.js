@@ -40,9 +40,9 @@ var styleWide2 = {
   height: '450px',
   width: 'auto',
   'border-radius': '10px',
-  'background-color': 'gray',
-  'margin': '8px',
-  'padding': '8px'
+  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'margin-bottom': '18px',
+  'padding': '12px'
 };
 
 var style2 = {
@@ -55,7 +55,7 @@ var style2 = {
 var image0 = {
   id: 0,
   path: "styles/images/doogle.jpg",
-  description: "HELLO THERE",
+  description: "Ready to take on the philosophy scene with tiny doogle",
   showPic: true,
   likes: 0,
   views: 0,
@@ -69,7 +69,7 @@ var image0 = {
 var image1 = {
   id: 1,
   path: "styles/images/bball.jpg",
-  description: "HI",
+  description: "Shooting hoops in the desert",
   showPic: true,
   likes: 0,
   views: 0,
@@ -83,7 +83,7 @@ var image1 = {
 var image2 = {
   id: 2,
   path: "styles/images/calf.jpg",
-  description: 'what up!!!',
+  description: 'Get that milk bb',
   showPic: true,
   likes: 0,
   views: 0,
@@ -97,7 +97,7 @@ var image2 = {
 var image3 = {
   id: 3,
   path: "styles/images/homies.jpg",
-  description: "HI",
+  description: "Casual at the lake",
   showPic: true,
   likes: 0,
   views: 0,
@@ -111,7 +111,7 @@ var image3 = {
 var image4 = {
   id: 4,
   path: "styles/images/shorts.jpg",
-  description: "HI",
+  description: "Brotherly love at Renn Fayre",
   showPic: true,
   likes: 0,
   views: 0,
@@ -125,7 +125,7 @@ var image4 = {
 var image5 = {
   id: 5,
   path: "styles/images/reflection.jpg",
-  description: "HI",
+  description: "Sometimes I need to lie down",
   showPic: true,
   likes: 0,
   views: 0,
@@ -139,7 +139,7 @@ var image5 = {
 var image6 = {
   id: 6,
   path: "styles/images/theweeds.jpg",
-  description: "HI",
+  description: "Chilling at the reservoir",
   showPic: true,
   likes: 0,
   views: 0,
@@ -153,7 +153,7 @@ var image6 = {
 var image7 = {
   id: 7,
   path: "styles/images/winter.jpg",
-  description: "HI",
+  description: "Winter in the desert",
   showPic: true,
   likes: 0,
   views: 0,
@@ -167,7 +167,7 @@ var image7 = {
 var image8 = {
   id: 8,
   path: "styles/images/silo.jpg",
-  description: "HI",
+  description: "In the dairy silo",
   showPic: true,
   likes: 0,
   views: 0,
@@ -181,7 +181,7 @@ var image8 = {
 var image9 = {
   id: 9,
   path: "styles/images/sbsb.jpg",
-  description: "HI",
+  description: "Student body meeting",
   showPic: true,
   likes: 0,
   views: 0,
@@ -195,7 +195,7 @@ var image9 = {
 var image10 = {
   id: 10,
   path: "styles/images/vanity.jpg",
-  description: "HI",
+  description: "The sea taught me vanity",
   showPic: true,
   likes: 0,
   views: 0,
@@ -209,7 +209,7 @@ var image10 = {
 var image11 = {
   id: 11,
   path: "styles/images/gold.jpg",
-  description: "HI",
+  description: "Back in the day",
   showPic: true,
   likes: 0,
   views: 0,
@@ -223,7 +223,7 @@ var image11 = {
 var image12 = {
   id: 12,
   path: "styles/images/mononoke.jpg",
-  description: "HI",
+  description: "No remarks necessary",
   showPic: true,
   likes: 0,
   views: 0,
@@ -237,7 +237,7 @@ var image12 = {
 var image13 = {
   id: 13,
   path: "styles/images/goose.jpg",
-  description: "HI",
+  description: "Beach with the goose",
   showPic: true,
   likes: 0,
   views: 0,
