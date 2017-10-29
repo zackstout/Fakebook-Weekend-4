@@ -61,4 +61,14 @@ picsApp.controller('CommandCenter', function() {
   };
 
 
+  // vc.addRecord = function(recordToAdd) {
+  //       $http.post('/records', recordToAdd).then(function (response) {
+  //           console.log('Success');
+  //           getRecords();
+  //       }).catch(function (error) {
+  //           console.log('Fail');
+  //       });
+  //   };
+
+
 });

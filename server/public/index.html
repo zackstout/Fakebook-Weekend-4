@@ -14,14 +14,19 @@
     {{3+5}}
 
     <div ng-repeat="image in cc.images">
-      
+
       <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300> <br>
 
       <div class="desc" ng-hide="image.showPic" ng-click="cc.clickImage(image)" height=300>
         {{image.description}} <br>
       </div>
 
-      <button ng-click="cc.clickLike(image)">Like!</button></t>Likes: {{image.likes}} &ensp;</t>Views: {{image.views}} <br>
+      <button ng-click="cc.clickLike(image)">Like!</button></t>Likes:
+      <!-- <ng-pluralize count= "cc.image.likes" when "{'0': 'No one likes this </3', 'one': '1 person likes this', 'other': '{} people like this!'}"> --> 
+      {{image.likes}}
+    <!-- </ng-pluralize> -->
+    &ensp;</t>Views: {{image.views}} <br>
+
 
       <form ng-submit="cc.clickComment(image)">
         <input type="text" ng-model="cc.comment">
