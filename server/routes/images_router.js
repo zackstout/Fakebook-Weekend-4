@@ -46,7 +46,11 @@ var image3 = {
   showComments: false
 };
 
-var images = [image1, image2, image3];
+var images = {
+  image1: image1,
+  image2: image2,
+  image3: image3
+};
 
 
 
@@ -62,6 +66,7 @@ var images = [image1, image2, image3];
 // Records GET route
 router.get('/', function(req, res){
     res.send(images);
+    console.log(images);
 });
 //
 // router.put('/:id', function(req,res){

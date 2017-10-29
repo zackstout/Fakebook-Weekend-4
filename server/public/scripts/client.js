@@ -6,41 +6,6 @@ var picsApp = angular.module('picsApp', []);
 picsApp.controller('CommandCenter', function($http) {
   var cc = this;
   getPics();
-  //
-  // var image1 = {
-  //   id: 1,
-  //   path: "styles/images/dogyawn.jpg",
-  //   description: "HELLO THERE",
-  //   showPic: true,
-  //   likes: 0,
-  //   views: 0,
-  //   comments: [],
-  //   showComments: false
-  // };
-  //
-  // var image2 = {
-  //   id: 2,
-  //   path: "styles/images/houseonwater.jpg",
-  //   description: "HI",
-  //   showPic: true,
-  //   likes: 0,
-  //   views: 0,
-  //   comments: [],
-  //   showComments: false
-  // };
-  //
-  // var image3 = {
-  //   id: 3,
-  //   path: "styles/images/fieldperson.jpg",
-  //   description: 'what up!!!',
-  //   showPic: true,
-  //   likes: 0,
-  //   views: 0,
-  //   comments: [],
-  //   showComments: false
-  // };
-  //
-  // cc.images = [image1, image2, image3];
 
   cc.clickImage = function(pic) {
     console.log('in here', pic.showPic);
@@ -88,4 +53,15 @@ cc.images = [];
 }
 
 
+
 });
+
+var x =1, y=2;
+
+var arr = [x, y];
+
+
+function changearr() {
+  x = 3;
+  return arr;
+}
