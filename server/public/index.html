@@ -13,7 +13,7 @@
     <h1> Fakebook </h1>
     {{3+5}}
 
-    <div ng-repeat="image in cc.images" id="{{index}}">
+    <div ng-repeat="image in cc.images track by $index">
 
       <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} height=300> <br>
 

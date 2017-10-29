@@ -18,7 +18,12 @@ picsApp.controller('CommandCenter', function($http) {
   cc.clickLike = function(pic) {
     console.log('in likes', pic.likes);
     pic.likes ++;
-    console.log(pic.id);
+    $http.put('/images/' + pic.id, pic).then(function (response) {
+      console.log('w00t');
+      getPics();
+    }).catch(function (err) {
+      console.log('whoops', err);
+    });
   };
 
   cc.clickComment = function(pic) {
@@ -29,16 +34,6 @@ picsApp.controller('CommandCenter', function($http) {
   cc.showComments = function(pic) {
     pic.showComments = !pic.showComments;
   };
-
-//
-//   vc.addRecord = function(recordToAdd) {
-//         $http.post('/records', recordToAdd).then(function (response) {
-//             console.log('Success');
-//             getRecords();
-//         }).catch(function (error) {
-//             console.log('Fail');
-//         });
-//     };
 
 cc.images = [];
 
@@ -51,6 +46,7 @@ cc.images = [];
     console.log('whooooops');
   });
 }
+
 
 
 
