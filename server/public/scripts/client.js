@@ -28,17 +28,10 @@ picsApp.controller('CommandCenter', function($http) {
     }
   };
 
-  cc.people = 'No one likes this </3';
-
   cc.clickLike = function(pic) {
     console.log('in likes', pic.likes);
     pic.likes ++;
-    
-    // if (pic.likes == 1) {
-    //   cc.people = '1 person likes this';
-    // } else {
-    //   cc.people = pic.likes + ' people like this!!!';
-    // }
+
     $http.put('/images/likes/' + pic.id, pic).then(function (response) {
       console.log('w00t');
       getPics();
@@ -48,7 +41,10 @@ picsApp.controller('CommandCenter', function($http) {
   };
 
   cc.clickComment = function(pic) {
-    pic.comments.push(angular.copy(cc.comment));
+    if (pic.comment !== '') {
+      pic.comments.push(pic.comment);
+      pic.comment = '';
+    }
     console.log(pic.comments);
   };
 

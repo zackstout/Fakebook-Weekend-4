@@ -13,12 +13,12 @@ var config = {
 var pool = new pg.Pool(config);
 //
 //
-// var styleHigh = {
-//   width: '380px',
-//   height: 'auto',
-//   'margin':'15px',
-//   'padding':'15px'
-// };
+var styleHigh = {
+  width: '380px',
+  height: 'auto',
+  'margin':'15px',
+  'padding':'15px'
+};
 
 var styleWide = {
   height: '300px',
@@ -27,14 +27,14 @@ var styleWide = {
   'padding':'8px'
 };
 
-// var styleHigh2 = {
-//   width: 'auto',
-//   height: '600px',
-//   'border-radius': '10px',
-//   'background-color': 'gray',
-//   'margin': '20px',
-//   'padding': '20px'
-// };
+var styleHigh2 = {
+  width: 'auto',
+  height: '600px',
+  'border-radius': '10px',
+  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'margin': '20px',
+  'padding': '20px'
+};
 
 var styleWide2 = {
   height: '500px',
@@ -60,6 +60,7 @@ var image0 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -74,6 +75,7 @@ var image1 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -88,11 +90,12 @@ var image2 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
-  style: styleWide,
+  style: styleHigh,
   style2: style2,
-  styleHolder: styleWide2
+  styleHolder: styleHigh2
 };
 
 var image3 = {
@@ -102,6 +105,7 @@ var image3 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -116,6 +120,7 @@ var image4 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -130,6 +135,7 @@ var image5 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -144,6 +150,7 @@ var image6 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -158,6 +165,7 @@ var image7 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -172,6 +180,7 @@ var image8 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -186,6 +195,7 @@ var image9 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -200,6 +210,7 @@ var image10 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -214,6 +225,7 @@ var image11 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -228,6 +240,7 @@ var image12 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -242,6 +255,7 @@ var image13 = {
   showPic: true,
   likes: 0,
   views: 0,
+  comment: '',
   comments: [],
   showComments: false,
   style: styleWide,
@@ -265,7 +279,7 @@ function updateLikesSentences() {
     } else if (images[i].likes == 1) {
       images[i].likesSentence = '1 person likes this';
     } else {
-      images[i].likesSentence = images[i].likes + ' people likes this!!!';
+      images[i].likesSentence = images[i].likes + ' people like this!!!';
     }
   }
 }
