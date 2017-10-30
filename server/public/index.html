@@ -13,7 +13,7 @@
     <h1> Welcome to Fakebook </h1>
 
     <div class="row">
-      <div ng-repeat="image in cc.images track by $index" class="col-md-4 col-sm-6 col-xs-12 col-lg-4">
+      <div ng-repeat="image in cc.images track by $index" class={{image.stylin}}>
         <div class="holdingTank" ng-style={{image.styleHolder}}>
 
           <img ng-show="image.showPic" ng-click="cc.clickImage(image)" ng-src={{image.path}} ng-style={{image.style}}> <br>

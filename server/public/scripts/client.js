@@ -6,8 +6,7 @@ var picsApp = angular.module('picsApp', []);
 picsApp.controller('CommandCenter', function($http) {
   var cc = this;
 
-
-    cc.images = [];
+  cc.images = [];
 
   getPics();
 
@@ -35,7 +34,7 @@ picsApp.controller('CommandCenter', function($http) {
     });
   };
 
-//going to need a ...POSt route??
+  //going to need a ...POSt route??
   cc.clickComment = function(pic) {
     if (pic.comment !== '') {
       $http.put('/images/comments/' + pic.id, pic).then(function (response) {
@@ -57,8 +56,6 @@ picsApp.controller('CommandCenter', function($http) {
       console.log('whoops', err);
     });
   };
-
-
 
   function getPics() {
     $http.get('/images').then(function (response) {

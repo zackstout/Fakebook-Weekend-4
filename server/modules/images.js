@@ -61,7 +61,8 @@ var image0 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image1 = {
@@ -76,7 +77,8 @@ var image1 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image2 = {
@@ -91,7 +93,8 @@ var image2 = {
   showComments: false,
   style: styleHigh,
   styleCaption: styleCaptionHigh,
-  styleHolder: styleHighBox
+  styleHolder: styleHighBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image3 = {
@@ -106,7 +109,8 @@ var image3 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image4 = {
@@ -121,7 +125,8 @@ var image4 = {
   showComments: false,
   style: styleHigh,
   styleCaption: styleCaptionHigh,
-  styleHolder: styleHighBox
+  styleHolder: styleHighBox,
+  stylin: "col-md-3 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image5 = {
@@ -136,7 +141,8 @@ var image5 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image6 = {
@@ -151,7 +157,8 @@ var image6 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image7 = {
@@ -166,7 +173,8 @@ var image7 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image8 = {
@@ -181,7 +189,8 @@ var image8 = {
   showComments: false,
   style: styleHigh,
   styleCaption: styleCaptionHigh,
-  styleHolder: styleHighBox
+  styleHolder: styleHighBox,
+  stylin: "col-md-3 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image9 = {
@@ -196,7 +205,8 @@ var image9 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image10 = {
@@ -211,7 +221,8 @@ var image10 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image11 = {
@@ -226,7 +237,8 @@ var image11 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image12 = {
@@ -241,7 +253,8 @@ var image12 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var image13 = {
@@ -256,7 +269,8 @@ var image13 = {
   showComments: false,
   style: styleWide,
   styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
