@@ -5,6 +5,10 @@ var picsApp = angular.module('picsApp', []);
 
 picsApp.controller('CommandCenter', function($http) {
   var cc = this;
+
+
+    cc.images = [];
+
   getPics();
 
   cc.clickImage = function(pic) {
@@ -54,7 +58,7 @@ picsApp.controller('CommandCenter', function($http) {
     });
   };
 
-  cc.images = [];
+
 
   function getPics() {
     $http.get('/images').then(function (response) {
