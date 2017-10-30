@@ -31,10 +31,10 @@ picsApp.controller('CommandCenter', function($http) {
     });
   };
 
-//going to need a ...POSt route??
+//going to need a ...POSt route?? NOTE: i changed it for DB!
   cc.clickComment = function(pic) {
     if (pic.comment !== '') {
-      $http.put('/images/comments/' + pic.id, pic).then(function (response) {
+      $http.post('/images/comments/' + pic.id, pic).then(function (response) {
         console.log('w00t');
         getPics();
       }).catch(function (err) {
@@ -58,7 +58,8 @@ picsApp.controller('CommandCenter', function($http) {
 
   function getPics() {
     $http.get('/images').then(function (response) {
-      console.log('got pics!');
+      console.log('got pics!', response.data);
+
       cc.images = response.data;
       console.log(cc.images);
     }).catch(function (err) {
