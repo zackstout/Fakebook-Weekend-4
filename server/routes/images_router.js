@@ -78,10 +78,38 @@ router.put('/likes/:id', function(req,res){
 //   res.sendStatus(201);
 // }); //end PUT route for comments
 
+
+
+
+
+
+router.get('/comments/:id', function(req, res) {
+  console.log('id', req.params.id);
+  pool.connect(function(err, db, done) {
+    if(err) {
+      console.log('Error connecting', err);
+      res.sendStatus(500);
+    } else {
+      //we connected to DB
+      var queryText = 'SELECT * FROM "fakebook_comments" WHERE "image_id" = $1 ORDER BY "comment_id";';
+      db.query(queryText, [req.params.id], function(err, result){
+        done();
+        if(err) {
+          console.log('Error making query', err);
+          res.sendStatus(500);
+        } else {
+          res.send(result.rows);
+        }
+      });
+    }
+  });
+}); //END GET ROUTE
+
+
 router.post('/comments/:id', function(req,res){
-  var imageId = req.params.id;
+  var imageId = req.body.image_id;
   var comment = req.body.comment;
-  console.log(imageId, comment);
+  console.log(req.body);
   //res.sendStatus(200);
   pool.connect(function (err, db, done) {
     if (err) {
@@ -105,18 +133,8 @@ router.post('/comments/:id', function(req,res){
   }); // END POOL
 }); //END PUT ROUTE
 
-// router.put('/showComments/:id', function(req, res){
-//   // console.log(req.body.comment);
-//   for (var i = 0; i < images.length; i++) {
-//     if (images[i].id == req.body.id) {
-//       images[i].showComments = !images[i].showComments;
-//       console.log(images[i]);
-//     }
-//   }
-//   res.sendStatus(201);
-// }); //end PUT route for showComments
 
-router.put('/showComments/:id', function(req,res){
+router.put('/showComments', function(req,res){
   var imageId = req.body.image_id;
   var showComments = req.body.showComments;
   console.log(req.body);
@@ -143,6 +161,9 @@ router.put('/showComments/:id', function(req,res){
   }); // END POOL
 }); //END PUT ROUTE
 
+
+
+
 router.get('/', function(req, res) {
   pool.connect(function(err, db, done) {
     if(err) {
@@ -163,6 +184,7 @@ router.get('/', function(req, res) {
     }
   });
 }); //END GET ROUTE
+
 
 //i'm realizing now we're going to have to put the images all the way back in the DB
 
