@@ -12,7 +12,7 @@ var styleWideBox = {
   width: 'auto',
   'border-radius': '12px',
   'background-color': 'rgba(231, 116, 113, 0.4)',
-  'margin-bottom': '12px',
+  'margin-bottom': '18px',
   'padding': '8px',
 };
 
@@ -37,7 +37,7 @@ var styleHighBox = {
   'border-radius': '12px',
   'background-color': 'rgba(231, 116, 113, 0.4)',
   'padding': '8px',
-  'margin-bottom': '12px'
+  'margin-bottom': '18px'
 };
 
 var styleCaptionHigh = {
@@ -78,7 +78,7 @@ var image1 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image2 = {
@@ -110,7 +110,7 @@ var image3 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image4 = {
@@ -158,7 +158,7 @@ var image6 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image7 = {
@@ -174,7 +174,7 @@ var image7 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image8 = {
@@ -206,7 +206,7 @@ var image9 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image10 = {
@@ -222,7 +222,7 @@ var image10 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-6"
 };
 
 var image11 = {
@@ -238,7 +238,7 @@ var image11 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-5 col-sm-6 col-xs-12 col-lg-5"
 };
 
 var image12 = {
@@ -254,7 +254,7 @@ var image12 = {
   style: styleWide,
   styleCaption: styleCaptionWide,
   styleHolder: styleWideBox,
-  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-6 col-sm-6 col-xs-12 col-lg-6"
 };
 
 var image13 = {
