@@ -13,19 +13,6 @@ var config = {
 };
 var pool = new pg.Pool(config);
 
-//
-// router.put('/likes/:id', function(req, res){
-//   console.log(req.body.id);
-//   for (var i = 0; i < images.length; i++) {
-//     if (images[i].id == req.body.id) {
-//       images[i].likes ++;
-//       images[i].anyLikes = true;
-//       console.log(images[i]);
-//     }
-//   }
-//   res.sendStatus(201);
-// }); //end PUT route for likes
-
 router.put('/views/:id', function(req,res){
   var imageId = req.body.image_id;
   var views = req.body.views;
@@ -51,7 +38,7 @@ router.put('/views/:id', function(req,res){
       }); // END QUERY
     }
   }); // END POOL
-}); //END PUT ROUTE
+}); //END PUT ROUTE FOR VIEWS
 
 router.put('/likes/:id', function(req,res){
   var imageId = req.body.image_id;
@@ -78,7 +65,7 @@ router.put('/likes/:id', function(req,res){
       }); // END QUERY
     }
   }); // END POOL
-}); //END PUT ROUTE
+}); //END PUT ROUTE FOR LIKES
 
 // router.put('/comments/:id', function(req, res){
 //   // console.log(req.body.comment);
@@ -132,7 +119,7 @@ router.post('/comments/:id', function(req,res){
 router.put('/showComments/:id', function(req,res){
   var imageId = req.body.image_id;
   var showComments = req.body.showComments;
-  console.log(imageId, likes);
+  console.log(req.body);
   //res.sendStatus(200);
   pool.connect(function (err, db, done) {
     if (err) {
@@ -155,27 +142,6 @@ router.put('/showComments/:id', function(req,res){
     }
   }); // END POOL
 }); //END PUT ROUTE
-
-// router.put('/views/:id', function(req, res){
-//   console.log(req.body.id);
-//   for (var i = 0; i < images.length; i++) {
-//     if (images[i].id == req.body.id) {
-//       images[i].showPic = !images[i].showPic;
-//       if (!images[i].showPic) {
-//         images[i].views ++;
-//       }
-//       console.log(images[i]);
-//     }
-//   }
-//   res.sendStatus(201);
-// }); //end PUT route for views
-
-
-
-// router.get('/', function(req, res){
-//   res.send(images);
-// });
-
 
 router.get('/', function(req, res) {
   pool.connect(function(err, db, done) {
