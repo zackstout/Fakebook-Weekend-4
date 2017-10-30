@@ -66,6 +66,27 @@ router.get('/', function(req, res){
   res.send(images);
 });
 
+//
+// router.get('/', function(req, res) {
+//   pool.connect(function(err, db, done) {
+//     if(err) {
+//       console.log('Error connecting', err);
+//       res.sendStatus(500);
+//     } else {
+//       //we connected to DB
+//       var queryText = 'SELECT * FROM "fakebook_images";';
+//       db.query(queryText, [], function(err, result){
+//         done();
+//         if(err) {
+//           console.log('Error making query', err);
+//           res.sendStatus(500);
+//         } else {
+//           res.send(result.rows);
+//         }
+//       });
+//     }
+//   });
+// }); //END GET ROUTE
 
 //i'm realizing now we're going to have to put the images all the way back in the DB
 router.put('/:id', function(req,res){
