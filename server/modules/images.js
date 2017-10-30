@@ -4,14 +4,15 @@ var styleWide = {
   height: '300px',
   width: 'auto',
   'margin':'8px',
-  'padding':'8px'
+  'padding':'8px',
+  'border-radius':'15px'
 };
 
 var styleWideBox = {
   height: '500px',
   width: 'auto',
   'border-radius': '12px',
-  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'background-color': 'rgba(153, 179, 255, 0.4)',
   'margin-bottom': '18px',
   'padding': '8px',
 };
@@ -19,7 +20,7 @@ var styleWideBox = {
 var styleCaptionWide = {
   width: 'auto',
   height: '300px',
-  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'background-color': 'rgba(153, 179, 255, 0.02)',
   'margin':'8px',
   'padding':'8px'
 };
@@ -28,14 +29,15 @@ var styleHigh = {
   height: '420px',
   width: 'auto',
   'margin':'8px',
-  'padding':'8px'
+  'padding':'8px',
+    'border-radius':'8px'
 };
 
 var styleHighBox = {
   width: 'auto',
   height: '590px',
   'border-radius': '12px',
-  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'background-color': 'rgba(153, 179, 255, 0.4)',
   'padding': '8px',
   'margin-bottom': '18px'
 };
@@ -43,7 +45,7 @@ var styleHighBox = {
 var styleCaptionHigh = {
   width: 'auto',
   height: '450px',
-  'background-color': 'rgba(231, 116, 113, 0.4)',
+  'background-color': 'rgba(153, 179, 255, 0.02)',
   'margin':'8px',
   'padding':'8px'
 };
@@ -94,7 +96,7 @@ var image2 = {
   style: styleHigh,
   styleCaption: styleCaptionHigh,
   styleHolder: styleHighBox,
-  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-3"
 };
 
 var image3 = {
@@ -273,6 +275,86 @@ var image13 = {
   stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
-var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13];
+var image14 = {
+  id: 14,
+  path: "styles/images/winter2.jpg",
+  description: "It's snowin",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comment: '',
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  styleCaption: styleCaptionWide,
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-5"
+};
+
+var image15 = {
+  id: 15,
+  path: "styles/images/roof.jpg",
+  description: "Atop the dorm",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comment: '',
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  styleCaption: styleCaptionWide,
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-5"
+};
+
+var image16 = {
+  id: 16,
+  path: "styles/images/dad.jpg",
+  description: "My dad: <span class=glyphicon glyphicon-fire>",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comment: '',
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  styleCaption: styleCaptionWide,
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-6"
+};
+
+var image17 = {
+  id: 17,
+  path: "styles/images/friends.jpg",
+  description: "In the kitchen",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comment: '',
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  styleCaption: styleCaptionWide,
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
+};
+
+var image18 = {
+  id: 18,
+  path: "styles/images/eye.jpg",
+  description: "The wide-eyed receiver",
+  showPic: true,
+  likes: 0,
+  views: 0,
+  comment: '',
+  comments: [],
+  showComments: false,
+  style: styleWide,
+  styleCaption: styleCaptionWide,
+  styleHolder: styleWideBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-3"
+};
+
+var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18];
 
 module.exports = images;

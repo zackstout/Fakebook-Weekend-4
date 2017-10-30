@@ -2,10 +2,19 @@ img {
   margin: 20px;
   /*height: 350px;
   width: auto;*/
+  border-radius: 5px;
 }
 
 ul {
   list-style-type: square;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background-image: url('images/ocean.jpeg')
 }
 
 .caption {
