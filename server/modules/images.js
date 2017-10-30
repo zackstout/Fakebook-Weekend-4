@@ -310,7 +310,7 @@ var image15 = {
 var image16 = {
   id: 16,
   path: "styles/images/dad.jpg",
-  description: "My dad: <span class=glyphicon glyphicon-fire>",
+  description: "My dad",
   showPic: true,
   likes: 0,
   views: 0,
@@ -349,10 +349,10 @@ var image18 = {
   comment: '',
   comments: [],
   showComments: false,
-  style: styleWide,
-  styleCaption: styleCaptionWide,
-  styleHolder: styleWideBox,
-  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-3"
+  style: styleHigh,
+  styleCaption: styleCaptionHigh,
+  styleHolder: styleHighBox,
+  stylin: "col-md-4 col-sm-6 col-xs-12 col-lg-4"
 };
 
 var images = [image0, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18];
