@@ -7,8 +7,12 @@ picsApp.controller('CommandCenter', function($http) {
   var cc = this;
   getPics();
 
+//added conditional for DB:
   cc.clickImage = function(pic) {
     console.log('in here', pic.showPic);
+    if (pic.showPic) {
+      pic.views ++;
+    }
     pic.showPic = !pic.showPic;
     console.log('in here again', pic.showPic);
     $http.put('/images/views/' + pic.id, pic).then(function (response) {

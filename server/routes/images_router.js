@@ -26,6 +26,33 @@ var pool = new pg.Pool(config);
 //   res.sendStatus(201);
 // }); //end PUT route for likes
 
+router.put('/views/:id', function(req,res){
+  var imageId = req.body.image_id;
+  var views = req.body.views;
+  console.log(req.body);
+  //res.sendStatus(200);
+  pool.connect(function (err, db, done) {
+    if (err) {
+      console.log('Error connecting', err);
+      res.sendStatus(500);
+    } else {
+      // We connected to the db!!!!! pool -1
+      var queryText = 'UPDATE "fakebook_images" SET "views" = $1, "showPic" = $2 WHERE "image_id" = $3;';
+      db.query(queryText, [views++, req.body.showPic, imageId], function (err, result) {
+        // We have received an error or result at this point
+        done(); // pool +1
+        if (err) {
+          console.log('Error making query', err);
+          res.sendStatus(500);
+        } else {
+          // Send back success!
+          res.sendStatus(201);
+        }
+      }); // END QUERY
+    }
+  }); // END POOL
+}); //END PUT ROUTE
+
 router.put('/likes/:id', function(req,res){
   var imageId = req.body.image_id;
   var likes = req.body.likes;
@@ -103,7 +130,7 @@ router.post('/comments/:id', function(req,res){
 // }); //end PUT route for showComments
 
 router.put('/showComments/:id', function(req,res){
-  var imageId = req.params.id;
+  var imageId = req.body.image_id;
   var showComments = req.body.showComments;
   console.log(imageId, likes);
   //res.sendStatus(200);
@@ -143,32 +170,7 @@ router.put('/showComments/:id', function(req,res){
 //   res.sendStatus(201);
 // }); //end PUT route for views
 
-router.put('/views/:id', function(req,res){
-  var imageId = req.params.id;
-  var views = req.body.views++;
-  console.log(imageId, views);
-  //res.sendStatus(200);
-  pool.connect(function (err, db, done) {
-    if (err) {
-      console.log('Error connecting', err);
-      res.sendStatus(500);
-    } else {
-      // We connected to the db!!!!! pool -1
-      var queryText = 'UPDATE "fakebook_images" SET "views" = $1 WHERE "image_id" = $2;';
-      db.query(queryText, [views, imageId], function (err, result) {
-        // We have received an error or result at this point
-        done(); // pool +1
-        if (err) {
-          console.log('Error making query', err);
-          res.sendStatus(500);
-        } else {
-          // Send back success!
-          res.sendStatus(201);
-        }
-      }); // END QUERY
-    }
-  }); // END POOL
-}); //END PUT ROUTE
+
 
 // router.get('/', function(req, res){
 //   res.send(images);
