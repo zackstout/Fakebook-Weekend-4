@@ -9,12 +9,13 @@ picsApp.controller('CommandCenter', function($http) {
 
 //added conditional for DB:
   cc.clickImage = function(pic) {
-    console.log('in here', pic.showPic);
+    console.log('in here', pic);
     if (pic.showPic) {
       pic.views ++;
     }
     pic.showPic = !pic.showPic;
-    console.log('in here again', pic.showPic);
+    
+    // console.log('in here again', pic.showPic);
     $http.put('/images/views/' + pic.id, pic).then(function (response) {
       console.log('w00t');
       getPics();
